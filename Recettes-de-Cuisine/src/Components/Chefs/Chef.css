@@ -1,0 +1,41 @@
+/* Conteneur des chefs */
+.chef-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px; /* Optionnel : ajuster l'espacement en haut */
+}
+
+/* Chaque élément de chef */
+.chef-item {
+    text-align: center; /* Centrer le titre et l'image */
+    width: 200px; /* Ajuster la largeur selon vos besoins */
+    margin-bottom: 30px;
+}
+
+/* Titre des chefs */
+.chef-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px; /* Espacement entre l'image et le titre */
+}
+
+/* Cercle autour de l'image */
+.chef-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Pour donner un effet circulaire */
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* Style de l'image dans le cercle */
+.chef-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pour que l'image couvre bien tout l'espace */
+}
+ 

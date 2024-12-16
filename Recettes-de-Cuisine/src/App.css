@@ -1,0 +1,301 @@
+/* --------------------- Global Styles --------------------- */
+
+/* Conteneur global */
+.App {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Texte de présentation */
+.text-App {
+  text-align: center;
+  margin: 120px 0 60px 0; /* Ajustez ici pour que le texte commence après le header */
+  padding: 20px;
+  background-color: #e8f1ff;
+  width: 100%;
+}
+
+.text-App h1 {
+  font-size: 2.5rem;
+  color: #3a506b;
+  margin: 0;
+}
+
+.text-App h1 span {
+  color: #e63946;
+}
+
+/* Cadre global */
+.frame-container {
+  width: 80%; /* Largeur du cadre */
+  background-color: #fff; /* Fond blanc pour le cadre */
+  border-radius: 10px; /* Coins arrondis */
+  border: 2px solid #333; /* Bordure visible autour du cadre */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour le cadre */
+  padding: 40px;
+  text-align: center;
+}
+
+/* Style du titre */
+.frame-container h1 {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.frame-container h2 {
+  font-size: 1.5rem;
+  color: #6f16ae;
+  margin-bottom: 20px;
+}
+
+/* Responsiveness - Small Screen Adjustments */
+@media (max-width: 768px) {
+  .recette-content {
+    flex-direction: column; /* Passer en colonne sur mobile */
+    align-items: center;
+  }
+
+  .recette-content img {
+    width: 80%;
+    margin-bottom: 20px; /* Ajouter un espacement sous l'image */
+  }
+
+  .recette-description {
+    width: 80%;
+  }
+
+  .recette-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .recette-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------- Recipe Component Styles --------------------- */
+
+/* Conteneur principal de la recette */
+.recette-details-container {
+  display: flex;
+  justify-content: center; 
+  padding: 60px;
+  margin-top: 80px;
+}
+
+/* Conteneur principal pour l'image et la description */
+.recette-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.recette-content img {
+  width: 35%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+  background-color: black;
+}
+
+.recette-description {
+  width: 60%;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #000;
+}
+
+/* --------------------- Form Styles --------------------- */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding: 80px;
+  padding-top: 280px;
+  box-sizing: border-box;
+}
+
+form {
+  background-color: #b34698;
+  border-radius: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  margin-left: 30px;
+  margin-top: -30px; /* Réduit l'espace au-dessus du formulaire */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrage vertical */
+  align-items: center;     /* Centrage horizontal */
+  height: auto;  
+}
+.form h2 {
+  margin-top: 15px;
+  color: #259435;
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center;    /* Centre verticalement */
+  text-align: center;     /* Centrage pour les textes multilignes */
+  height: 100%;           /* S'assure que le parent a une hauteur */
+}
+input[type="text"],
+textarea,
+input[type="file"] {
+  padding: 30px;
+  background-color: #635ae3;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 80%;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  width: 50%;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  margin-left: 100px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #0e0e0e;
+}
+
+/* --------------------- Recipe Grid Styles --------------------- */
+
+.recette-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.recette-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+.recette-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.recette-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #007bff;
+}
+
+.recette-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* --------------------- Header Styles --------------------- */
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  z-index: 1000;
+  height: 60px;
+  border-bottom: 1px solid #cf1212;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.connexion-button {
+  padding: 8px 16px;
+  background-color: #aaaeb2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.connexion-button:hover {
+  background-color: #0056b3;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}

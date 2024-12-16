@@ -1,0 +1,135 @@
+/* Conteneur principal de la recette */
+.recette-details-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Cadre global */
+.frame-container {
+  width: 80%;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+}
+
+/* Style du titre */
+.frame-container h1 {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Style du titre secondaire (titre de la recette) */
+.frame-container h2 {
+  font-size: 1.5rem;
+  color: #db0909;
+  margin-bottom: 20px;
+}
+
+/* Conteneur principal pour l'image et la description */
+.recette-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+/* Image à gauche */
+.recette-content img {
+  width: 35%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+  background-color: black;
+}
+
+/* Description à droite */
+.recette-description {
+  width: 60%;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #000;
+}
+
+/* Titre des étapes */
+.etape-title {
+  font-weight: bold;
+  color: #1c7cdd;
+  margin-top: 20px;
+}
+
+/* Responsiveness : Sur les écrans plus petits */
+@media (max-width: 768px) {
+  .recette-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recette-content img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .recette-description {
+    width: 80%;
+  }
+}
+
+/* Section pour les avis */
+.avis-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border-bottom: #2b6bab;
+}
+
+/* Conteneur des étoiles */
+.rating-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.star {
+  font-size: 2rem;
+  color: #b50808; /* Couleur blanche par défaut pour les étoiles */
+  cursor: pointer;
+}
+
+.star.selected {
+  color: #ffcc00; /* Couleur jaune pour les étoiles sélectionnées */
+}
+
+.star:hover {
+  color: #ffcc00; /* Couleur jaune au survol */
+}
+
+/* Texte de commentaire */
+.comment-textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn1 {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit-btn1:hover {
+  background-color: #45a049;
+}

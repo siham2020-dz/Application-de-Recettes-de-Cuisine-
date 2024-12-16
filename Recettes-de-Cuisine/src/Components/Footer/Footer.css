@@ -1,0 +1,122 @@
+/* Assurez-vous que le footer est toujours en bas de la page */
+
+  
+  .footer {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Permet au footer de rester en bas */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .p{
+    color: black;
+  }
+  .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    color: aquamarine;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-media {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-media a {
+    display: inline-block;
+  }
+  
+  .social-media img {
+    width: 35px;
+    height: 35px;
+    filter: invert(6%) sepia(5%) saturate(21%) hue-rotate(37deg) brightness(93%) contrast(8px);
+    
+  }
+  
+  .footer-bottom {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    color: black;
+  }
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column; /* Mettre les éléments les uns sous les autres */
+      text-align: center;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .social-media {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .social-media img {
+      width: 30px; /* Agrandir légèrement les icônes des réseaux sociaux */
+      height: 30px;
+    }
+  
+    .logo img {
+      width: 50px; /* Agrandir le logo */
+      height: 50px;
+      margin-bottom: 10px;
+    }
+  
+    .footer-bottom p {
+      font-size: 12px; /* Réduire la taille du texte en bas du footer */
+    }
+  }
+  
+  /* Pour les très petits écrans (smartphones en mode portrait) */
+  @media (max-width: 480px) {
+    .footer {
+      padding: 15px;
+    }
+  
+    .footer-links a {
+      font-size: 14px; /* Réduire la taille des liens */
+    }
+  
+    .footer-bottom p {
+      font-size: 12px; /* Réduire davantage la taille du texte */
+    }
+  }
